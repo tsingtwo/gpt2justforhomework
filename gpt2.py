@@ -41,7 +41,7 @@ train_set = TensorDataset(dataset_tensor,
 train_loader = DataLoader(dataset=train_set,
                           batch_size=1,
                           shuffle=False)
-print(train_loader)
+# print(train_loader)
 from torch import nn
 from torch.autograd import Variable
 import time
@@ -64,7 +64,7 @@ for i in range(epoch):
 
         loss, logits, _ = model(data, labels=target)
 
-        total_loss += loss
+        total_loss += int(loss)
 
         loss.backward()
         optimizer.step()
