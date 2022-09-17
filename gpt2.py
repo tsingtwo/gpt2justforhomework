@@ -18,7 +18,7 @@ from transformers import GPT2LMHeadModel
 # 读取 GPT-2 预训练模型
 model = GPT2LMHeadModel.from_pretrained("gpt2")
 
-with open('C:\\Users\\nrj1224\Desktop\\HPC-summer\\lab5\\X.txt', 'r', encoding='utf-8', errors='ignore') as f:
+with open('X.txt', 'r', encoding='utf-8', errors='ignore') as f:
     dataset = f.read()
 # print(len(dataset))
 
@@ -27,7 +27,7 @@ del(dataset)
 
 dataset_cut = []
 for i in range(len(indexed_text)//1024):
-    # 将字符串分段成长度为 512
+    # 将字符串分段成长度为 1024
     dataset_cut.append(indexed_text[i*1024:i*1024+1024])
 del(indexed_text)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
