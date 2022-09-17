@@ -18,7 +18,7 @@ from transformers import GPT2LMHeadModel
 # 读取 GPT-2 预训练模型
 model = GPT2LMHeadModel.from_pretrained("gpt2")
 
-with open('./home/nrj-summer/gpt2justforhomework/.git/X.txt', 'r', encoding='utf-8', errors='ignore') as f:
+with open('./home/nrj-summer/gpt2justforhomework/X.txt', 'r', encoding='utf-8', errors='ignore') as f:
     dataset = f.read()
 # print(len(dataset))
 
