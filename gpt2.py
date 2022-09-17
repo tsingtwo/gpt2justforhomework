@@ -62,7 +62,9 @@ for i in range(epoch):
 
         optimizer.zero_grad()
 
-        loss, logits, _ = model(data, labels=target)
+#         loss, logits, _ = model(data, labels=target)
+        loss = model(data, labels=target).loss
+        logits = model(data, labels=target).logits
 
         total_loss += float(loss)
 
