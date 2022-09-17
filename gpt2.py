@@ -1,5 +1,6 @@
 import random
 
+
 def select_top_k(predictions, k=10):
     predicted_index = random.choice(
         predictions[0, -1, :].sort(descending=True)[1][:10]).item()
@@ -48,7 +49,7 @@ import time
 
 pre = time.time()
 
-epoch = 30  # 循环学习 30 次
+epoch = 1  # 循环学习 30 次
 
 model.to(device)
 model.train()
