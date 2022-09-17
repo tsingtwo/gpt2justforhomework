@@ -64,7 +64,7 @@ for i in range(epoch):
 
         loss, logits, _ = model(data, labels=target)
 
-        total_loss += (int)loss
+        total_loss += loss
 
         loss.backward()
         optimizer.step()
