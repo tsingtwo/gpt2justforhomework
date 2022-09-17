@@ -42,8 +42,8 @@ class MNISTDataset(torch.utils.data.Dataset):
     
     def __len__(self):
         return len(self.labels)
-train_dataset = MNISTDataset('./MNIST', transform=torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1037,), (0.3081,))]))
-test_dataset = MNISTDataset('./MNIST', train=False, transform=torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1037,), (0.3081,))]))
+train_dataset = MNISTDataset('', transform=torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1037,), (0.3081,))]))
+test_dataset = MNISTDataset('', train=False, transform=torchvision.transforms.Compose([torchvision.transforms.ToTensor(), torchvision.transforms.Normalize((0.1037,), (0.3081,))]))
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=False)
 def fc_in(image, Conv, Pool):
