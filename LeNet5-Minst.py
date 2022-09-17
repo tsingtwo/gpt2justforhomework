@@ -21,6 +21,7 @@ class MNISTDataset(torch.utils.data.Dataset):
     def __init__(self, root, train=True, transform=None):
         self.file_pre = 'train' if train == True else 't10k'
         self.transform = transform
+#         print(os.path.join(root, '%s-labels-idx1-ubyte.gz' % self.file_pre))
         self.label_path = os.path.join(root, '%s-labels-idx1-ubyte.gz' % self.file_pre)
         # C:\Users\nrj1224\Desktop\HPC-summer\lab5\data\MNIST\raw
         self.image_path = os.path.join(root, '%s-images-idx3-ubyte.gz' % self.file_pre)
