@@ -49,7 +49,7 @@ import time
 
 pre = time.time()
 
-epoch = 1  # 循环学习 30 次
+epoch = 10  # 循环学习 30 次
 
 model.to(device)
 model.train()
